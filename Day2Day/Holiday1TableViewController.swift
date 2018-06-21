@@ -37,10 +37,10 @@ class Holiday1TableViewController: UITableViewController {
             task.resume()
         }
     
-        print("1206")
-        sleep(5)
+        sleep(2)
         print(holidayevent)
         print(holidaydate)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -62,7 +62,7 @@ class Holiday1TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 17
+        return holidayevent.count
     }
 
     
@@ -77,7 +77,7 @@ class Holiday1TableViewController: UITableViewController {
         //else{
         
         //}
-        tableView.reloadData()
+        //tableView.reloadData()
         return cell
     }
     
