@@ -1,34 +1,32 @@
 //
-//  HolidayTableViewController.swift
+//  Holiday1TableViewController.swift
 //  Day2Day
 //
-//  Created by Kam Hong Chan on 19/06/2018.
+//  Created by Kam Hong Chan on 21/06/2018.
 //  Copyright © 2018 Kam Hong Chan. All rights reserved.
 //
 
 import UIKit
 
-class HolidayTableViewController: UITableViewController {
-  
+class Holiday1TableViewController: UITableViewController {
+    
     var holidays = [HolidayResults]()
     var holidaydate = [String]()
     var holidayevent = [String]()
     var row :Int = 0
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
-    
         if let urlStr = "https://drive.ntou.edu.tw/STgj/document.json?a=r11a0Y6l-4M&dl=1&ht=NTA0ODhkZjMyOTZkNWI3OTFhMWVkZGI0NjA1ZjIxYTA=".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: urlStr) {
             let task = URLSession.shared.dataTask(with: url) { (data, response , error) in
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .iso8601
-                if let data = data, let holidayResults = try?decoder.decode(HolidayResults.self, from: data)
+                if let data = data, let holidayResults = try?
+                    decoder.decode(HolidayResults.self, from: data)
                 {
                     for Holiday in holidayResults.results {
-                         print("error")
                         let holidaydate = self.holidaydate.append(Holiday.date)
                         let holidayevent = self.holidayevent.append(Holiday.name)
                     }
@@ -38,7 +36,16 @@ class HolidayTableViewController: UITableViewController {
             }
             task.resume()
         }
-        
+    
+        print("1206")
+        sleep(5)
+        print(holidayevent)
+        print(holidaydate)
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,30 +62,25 @@ class HolidayTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        /*if holidaydate.count > 0
-        {
-            return holidaydate.count
-        }
-        else{
-             return 1
-        }*/
         return 17
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "holidaycell", for: indexPath) as! HolidayTableViewCell
-       // if holidaydate.count > 0
+        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "holiday1cell", for: indexPath) as! Holiday1TableViewCell
+        //if holidaydate.count > 0
         //{
-            cell.dateLabel.text = holidaydate[indexPath.row]
-            cell.eventLabel.text = holidayevent[indexPath.row]
+        cell.hdateLabel.text = holidaydate[indexPath.row]
+        cell.heventLabel.text = holidayevent[indexPath.row]
         //}
         //else{
-            
+        
         //}
+        tableView.reloadData()
         return cell
     }
-
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -124,6 +126,5 @@ class HolidayTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 }
-
-

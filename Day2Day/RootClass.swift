@@ -6,6 +6,7 @@
 //    Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation
+import UIKit
 
 struct HolidayResults: Codable {
     struct Holiday : Codable {
@@ -17,5 +18,29 @@ struct HolidayResults: Codable {
     }
     var resultCount: Int
     var results: [Holiday]
+}
+
+struct Schedule: Codable{
+    var event: String
+    var date: String
+    var time: String
+    var position: String
+    var memo: String
+    
+    static func readSchedulesFromFile() -> [Schedule]? {
+        let propertyDecoder = PropertyListDecoder()
+        if let data = UserDefaults.standard.data(forKey: "schesdules"), let schedules = try? propertyDecoder.decode([Schedule].self, from: data) {
+            return schedules
+        } else {
+            return nil
+        }
+    }
+    
+    static func saveToFile(schedules: [Schedule]) {
+        let propertyEncoder = PropertyListEncoder()
+        if let data = try? propertyEncoder.encode(schedules) {
+            UserDefaults.standard.set(data, forKey: "schedules")
+        }
+    }
 }
 
