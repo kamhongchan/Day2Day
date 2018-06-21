@@ -29,7 +29,7 @@ struct Schedule: Codable{
     
     static func readSchedulesFromFile() -> [Schedule]? {
         let propertyDecoder = PropertyListDecoder()
-        if let data = UserDefaults.standard.data(forKey: "schesdules"), let schedules = try? propertyDecoder.decode([Schedule].self, from: data) {
+        if let data = UserDefaults.standard.data(forKey: "schedules"), let schedules = try? propertyDecoder.decode([Schedule].self, from: data) {
             return schedules
         } else {
             return nil

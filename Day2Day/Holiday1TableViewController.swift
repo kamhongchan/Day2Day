@@ -40,7 +40,7 @@ class Holiday1TableViewController: UITableViewController {
         sleep(2)
         print(holidayevent)
         print(holidaydate)
-        
+        print(UserDefaults.standard.dictionaryRepresentation())
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

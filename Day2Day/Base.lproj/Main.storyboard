@@ -201,7 +201,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <accessibility key="accessibilityConfiguration" label="日曆"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="日曆" id="7rI-pq-TXL"/>
+                    <tabBarItem key="tabBarItem" title="日曆" image="SBSApplicationShortcutSystemIcon_Date" id="7rI-pq-TXL"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="日曆" largeTitleDisplayMode="always" id="KMx-ey-dFf"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -233,7 +233,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="376" height="114.66666666666667"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="sdate" text="01/01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mQR-nS-dc7">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="sdate" text="01/01" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mQR-nS-dc7">
                                             <rect key="frame" x="40" y="25" width="96" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <accessibility key="accessibilityConfiguration" identifier="date"/>
@@ -249,7 +249,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="stime" text="12:34" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MJH-T7-Rbo">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="stime" text="12:34" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MJH-T7-Rbo">
                                             <rect key="frame" x="40" y="66" width="96" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <accessibility key="accessibilityConfiguration" identifier="date"/>
@@ -272,7 +272,7 @@
                             <outlet property="delegate" destination="t8a-87-xbp" id="I8U-sf-Uid"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="行事曆" id="hAb-Cm-Ybs"/>
+                    <tabBarItem key="tabBarItem" title="行事曆" image="SBSApplicationShortcutSystemIcon_ComposeNew" id="hAb-Cm-Ybs"/>
                     <navigationItem key="navigationItem" title="行事曆" largeTitleDisplayMode="always" id="gpW-od-bEI">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="1Ex-eT-As1">
                             <connections>
@@ -552,7 +552,7 @@
         <scene sceneID="lNH-1l-41M">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eBl-Mz-FBO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="行事曆" id="aId-nr-ftv"/>
+                    <tabBarItem key="tabBarItem" title="行事曆" image="SBSApplicationShortcutSystemIcon_ComposeNew" id="aId-nr-ftv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u7K-aZ-IZr">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -571,7 +571,7 @@
         <scene sceneID="rpc-FN-6pQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pmh-V5-S6S" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="日曆" id="nkt-NO-FbR"/>
+                    <tabBarItem key="tabBarItem" title="日曆" image="SBSApplicationShortcutSystemIcon_Date" id="nkt-NO-FbR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="jxv-n1-WHt">
                         <rect key="frame" x="0.0" y="20" width="414" height="96"/>
@@ -590,7 +590,7 @@
         <scene sceneID="8hf-nr-LaT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zuG-2j-xk4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="假期" id="BFA-L4-rF4"/>
+                    <tabBarItem key="tabBarItem" title="假期" image="StarShape-large" id="BFA-L4-rF4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="WXh-ZP-8He">
                         <rect key="frame" x="0.0" y="20" width="414" height="96"/>
@@ -606,6 +606,11 @@
             <point key="canvasLocation" x="2757" y="-711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SBSApplicationShortcutSystemIcon_ComposeNew" width="35" height="35"/>
+        <image name="SBSApplicationShortcutSystemIcon_Date" width="35" height="35"/>
+        <image name="StarShape-large" width="26" height="26"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="PzT-vl-sPU"/>
     </inferredMetricsTieBreakers>
